@@ -6,7 +6,7 @@ board = [
     ["", "", ""],
     ["", "", ""]
 ]
-size = (723, 823)
+size = (600, 700)
 
 class Board:
     btn_stats = []
@@ -32,7 +32,7 @@ class Board:
         for btn in self.btn_stats:
             btn.bind("<Button-1>", self.write)
 
-    def write(self, e):
+    def write(self, e=None):
         btn = e.widget
         if btn["state"] == NORMAL: 
             btn.config(text=self.current)
@@ -98,4 +98,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
